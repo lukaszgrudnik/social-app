@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Post} from "./components/post/post";
-import {Comment} from "./components/comment/comment";
+import {Post} from "../../projects/common/src/lib/components/post/post";
 
 @Component({
   selector: 'app-root',
