@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<div class="top">
+
+</div>
+<div class="posts-list">
+  <post *ngFor="let post of posts" [post]="post" (comment)="comment($event)"></post>
+</div>

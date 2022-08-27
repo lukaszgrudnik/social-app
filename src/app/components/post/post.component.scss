@@ -1,0 +1,134 @@
+@import "./src/styles/shadow";
+@import "./src/styles/colors";
+@import "./src/styles/buttons";
+
+post {
+
+  & > div:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+
+    button {
+      align-self: end;
+    }
+
+    @include shadow;
+
+    .content {
+      font-size: 1rem;
+      //padding: 1rem 0;
+    }
+
+    .top {
+
+      display: flex;
+      justify-content: space-between;
+
+      .author {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        width: max-content;
+
+        .date {
+          font-size: .5rem;
+          font-weight: bolder;
+          color: $smoke-black;
+        }
+
+        .frame {
+          width: 2rem;
+          height: 2rem;
+
+          min-width: 16px;
+          min-height: 16px;
+          overflow: hidden;
+          border-radius: 50%;
+
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+
+        }
+
+      }
+    }
+
+    .interaction {
+
+      border-top: 2px solid $smoke-gray;
+      border-bottom: 2px solid $smoke-gray;
+      padding: .5rem 0;
+      display: flex;
+      justify-content: space-evenly;
+
+      button {
+        border: none;
+        outline: none;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .3rem 4rem;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $smoke-gray;
+        }
+
+        &:active {
+          transform: scale(.9);
+        }
+
+      }
+
+
+    }
+
+    .comment-creator {
+
+
+      .frame {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        min-width: 16px;
+        min-height: 16px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+
+      }
+
+      input {
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: $smoke-gray;
+        border-radius: 1rem;
+        padding: .4rem 1rem;
+      }
+
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .comments {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+  }
+}
