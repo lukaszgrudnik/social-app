@@ -5,8 +5,10 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
-import {CommonModule} from "../../projects/common/src/lib/common.module"
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {SaCommonModule} from "projects/common/src/lib/sa-common.module"
+import {CommonModule} from "@angular/common";
+import {LoginModule} from "./login/login.module";
 
 @NgModule({
   declarations: [
@@ -14,10 +16,11 @@ import {CommonModule} from "../../projects/common/src/lib/common.module"
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
+    CommonModule,
     HttpClientModule,
-    FormsModule,
-    CommonModule
+    SaCommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

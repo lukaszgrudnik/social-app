@@ -15,6 +15,7 @@ router.post('/post/comment', (req, res, next) => {
   post.comments.push(comment);
   console.log(post);
   res.json(posts);
+  next();
 })
 
 
