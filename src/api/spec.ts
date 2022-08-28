@@ -4,3 +4,7 @@ export interface Comment {
   userId: string,
   token: string
 }
+
+export interface Post {
+
+}
